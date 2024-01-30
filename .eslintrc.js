@@ -8,10 +8,6 @@ module.exports = {
     'unused-imports/no-unused-imports': 'warn',
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off",
-    "sort-imports": ["warn", {
-      "ignoreCase": false,
-      "allowSeparatedGroups": false
-    }],
     'unused-imports/no-unused-vars': [
       'warn',
       {
