@@ -12,7 +12,9 @@ const Project = ({ project }: { project: ProjectType }) => {
           {project.name}
         </header>
         <div className="min-h-60 p-2.5">No project description provided.</div>
-        <footer className="p-2.5">Created {localDate}</footer>
+        <footer className="text-slate-500 text-sm p-2.5">
+          Created {localDate}
+        </footer>
       </section>
     </Link>
   )
