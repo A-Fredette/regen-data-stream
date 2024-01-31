@@ -7,7 +7,7 @@ const Project = ({ project }: { project: ProjectType }) => {
 
   return (
     <Link href={`/posts/${project.id}`}>
-      <section className="mt-10 hover:cursor-pointer hover:shadow-lg container mx-auto bg-white h-auto w-1/4  border rounded-md shadow-md">
+      <section className="mt-6 hover:cursor-pointer hover:shadow-lg mx-auto bg-white h-auto border rounded-md shadow-md w-11/12 sm:w-11/12 md:w-3/4 lg:w-1/2 xl:w-1/2 2xl:w-1/3">
         <header className="flex items-center text-lg p-2.5 font-bold border-b h-12">
           {project.name}
         </header>
