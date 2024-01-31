@@ -2,17 +2,17 @@ import { PostProps } from '@/features/posts'
 import { getLocalFromUtc } from '@/utils/getLocalFromUtc'
 import React from 'react'
 
-const Post: React.FC<PostProps> = ({ post, projectName }) => {
+const Post: React.FC<PostProps> = ({ post }) => {
   const localDate = getLocalFromUtc(post.createdAt)
 
   return (
     <>
-      <section className="h-60 shadow-lg min-w-60 bg-red-300 border rounded-md d flex-col m-5">
-        <div className="inline-flex flex-col p-2.5">
-          <header className="text-lg bold">{post.title}</header>
-          <div>{localDate}</div>
+      <section className="h-40 shadow-lg min-w-60 bg-white border rounded-md d flex flex-col m-5">
+        <div className="inline-flex flex-col p-2.5 border-b w-full">
+          <header className="font-bold text-black">{post.title}</header>
+          <div className="text-slate-500 text-sm">{localDate}</div>
         </div>
-        <div className="p-2.5">{post.comment}</div>
+        <div className="h-20 p-2.5 overflow-scroll">{post.comment}</div>
       </section>
     </>
   )

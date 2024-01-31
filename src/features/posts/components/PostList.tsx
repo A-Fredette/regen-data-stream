@@ -4,13 +4,7 @@ import { Post, PostT } from '@/features/posts'
 import useFetchPosts from '@/hooks/useGetMorePosts'
 import { useState } from 'react'
 
-const PostList = ({
-  projectId,
-  projectName
-}: {
-  projectId: string
-  projectName: string
-}) => {
+const PostList = ({ projectId }: { projectId: string }) => {
   const [offset, setOffset] = useState(10)
   const [posts, loading, error] = useFetchPosts(projectId, offset)
 
@@ -20,9 +14,7 @@ const PostList = ({
     <>
       {posts &&
         posts.length > 0 &&
-        posts.map((post: PostT) => (
-          <Post key={post.id} post={post} projectName={projectName} />
-        ))}
+        posts.map((post: PostT) => <Post key={post.id} post={post} />)}
 
       {loading ? (
         <div>Loading older posts...</div>
@@ -32,7 +24,11 @@ const PostList = ({
         </div>
       )}
 
-      {error && <div>Something went wrong...please refresh the page.</div>}
+      {error && (
+        <div className="text-red-600 font-bold">
+          Something went wrong...please refresh the page.
+        </div>
+      )}
     </>
   )
 }

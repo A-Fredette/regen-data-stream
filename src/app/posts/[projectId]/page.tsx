@@ -10,9 +10,9 @@ const ProjectPage = async ({ params }: { params: { projectId: string } }) => {
   return (
     <>
       {posts.map((post: PostT) => (
-        <Post key={post.id} post={post} projectName={project.name} />
+        <Post key={post.id} post={post} />
       ))}
-      <PostList projectId={project.id} projectName={project.name} />
+      <PostList projectId={project.id} />
     </>
   )
 }
