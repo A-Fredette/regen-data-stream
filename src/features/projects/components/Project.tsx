@@ -8,11 +8,13 @@ const Project = ({ project }: {project: ProjectType}) => {
 
   return (
     <Link href={`/posts/${project.id}`}>
-      <header>{project.name}</header>
-      <div>
-        No project description.
-      </div>
-      <div>Created: {localDate}</div>
+      <section className="mt-16 hover:cursor-pointer hover:shadow-lg container mx-auto bg-white h-auto w-2/3  border rounded-md shadow-md">
+        <header className="flex items-center text-lg p-2.5 font-bold border-b h-12">{project.name}</header>
+        <div className="min-h-60 p-2.5">
+          No project description provided.
+        </div>
+        <footer className="p-2.5">Created: {localDate}</footer>
+      </section>
     </Link>
   );
 }
